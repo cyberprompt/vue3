@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Vue 3 Intro</title>
+    <link href="/css/default.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+</head>
+
+
+<body>
+
+    <main>
+
+        <div id="app" v-cloak>
+            <h1>{{greeting}}</h1>
+        
+        <button v-on:click="customFunction">customFunction</button> 
+        <button @click="otherFunction">otherFunction()</button>
+
+        <p><input type="text" @keyup v-model="input1"/> {{input1}} <em>show and change value 2-way binding</em></p> 
+        <p><input type="text" @keyup.enter="showEnter" placeholder="focus and press Enter"/> {{confirm}} <em>enter keypress example</em></p>        
+        <p><input type="text" @keyup.enter="showPassedVal(confirm)" placeholder="type and press Enter"/>  <em>inline value passing</em></p> 
+
+
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="/js/intro.js"></script>    
+    <script>
+    document.onreadystatechange = ()=>{
+        if (document.readyState === 'complete') {   // wait till DOM is accessible
+            VCA ? VCA.mount("#app") : null;	        // check app exists and...
+        }                                           // apply to whatever application container ID you choose 
+    }  
+    </script>
+    <script src="/js/nav.js"></script>
+</body>
+
+
+</html>

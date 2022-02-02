@@ -1,0 +1,43 @@
+:root{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+[v-cloak]{ display: none; }
+
+html {}
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  nav{
+    position: absolute;
+    left:0; top:0;
+    width: 22rem;
+    font-size: 1.6rem;
+    border-right:1px dashed #ccc;
+    background-color: #fcfcfc;
+    height: 100%;
+  }
+  nav ul{
+    list-style-type: none;
+    padding-left: 2rem;
+  }    
+  nav a{
+    text-decoration: none;
+    font-weight: bold;
+  }    
+  nav a:hover{
+    text-decoration: solid;
+  }    
+
+  main{
+    margin-left: 23rem;
+    font-size: 1.6rem;
+  }    
+
+  h1{
+    font-size: 3rem;
+  }      
