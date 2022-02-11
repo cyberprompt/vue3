@@ -6,6 +6,7 @@
 
     <title>Vue 3 Life Cycle Hooks</title>
     <link href="/css/default.css" rel="stylesheet" />
+    <link href="/css/components.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
 </head>
@@ -16,8 +17,8 @@
     <main>
 
         <div id="app" v-cloak>
-
-
+            <button @click="toggleBox">Toggle Box</button>
+            <test-box v-if="isVisible" />
 
         </div>
 

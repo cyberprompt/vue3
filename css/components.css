@@ -2,3 +2,9 @@ input{
     display: block;
     margin:1em 0;
 }
+
+.test-box{
+    width: 30rem;
+    height: 15rem;
+    background-color: blueviolet;
+}    
