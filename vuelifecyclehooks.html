@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Vue 3 Life Cycle Hooks</title>
+    <link href="/css/default.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+</head>
+
+
+<body>
+
+    <main>
+
+        <div id="app" v-cloak>
+
+
+
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="/js/lifecyclehooks.js"></script>    
+    <script>
+    document.onreadystatechange = ()=>{
+        if (document.readyState === 'complete') {   // wait till DOM is accessible
+            VCA ? VCA.mount("#app") : null;	        // check app exists and...
+        }                                           // apply to whatever application container ID you choose 
+    }  
+    </script>
+    <script src="/js/nav.js"></script>
+</body>
+
+
+</html>

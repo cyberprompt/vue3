@@ -20,14 +20,14 @@ VCA.component("login-form", {       // give name of tag and options
         <form @submit.prevent="handleSubmit">
             <h1>{{title}}</h1>
             <custom-input v-for="(input,idx) in inputs"               
-                v-model="input.value" 
+                v-model="input.value"               
                 :key="idx" 
                 :label="input.label" 
                 :type="input.type" 
             />
             <button>Submit</button>
         </form>
-    `,
+    `,                               // note: v-model exposes modelValue for use in getter/setter functions
     components: ['custom-input'],
     data(){
         return{
@@ -53,6 +53,8 @@ VCA.component("login-form", {       // give name of tag and options
     }
 });
 
+
+
 VCA.component("custom-input", {
     template: `
         <label>
@@ -63,7 +65,7 @@ VCA.component("custom-input", {
     props: [                                // define any values passed from parent (form) object
         "label",
         "type",
-        "modelValue"
+        "modelValue"                        // modelValue is available when using v-model
     ],           
     computed: {                              // allows variable names to be used as keys with get and set methods
         inputValue:{

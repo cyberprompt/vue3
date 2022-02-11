@@ -2,7 +2,8 @@ const navArr = [
     ["/","Home"],
     ["/vueintro.html","Intro and Setup"],
     ["/vuecomponents.html","Components"],
-    ["/vuecomponentprops.html","Component Props"]
+    ["/vuecomponentprops.html","Component Props"],
+    ["/vuelifecyclehooks.html","Lifecycle Hooks"]
 ];    
 
 const navEl = document.createElement("nav");
